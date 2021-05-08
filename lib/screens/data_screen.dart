@@ -58,7 +58,7 @@ class _DataScreenState extends State<DataScreen> {
                                 });
                               },
                               child: CircularTimeFrameSelector(
-                                  '1W', 1, currentTimeFrame),
+                                  '7D', 1, currentTimeFrame),
                             ),
                             GestureDetector(
                               onTap: () {
@@ -67,7 +67,7 @@ class _DataScreenState extends State<DataScreen> {
                                 });
                               },
                               child: CircularTimeFrameSelector(
-                                  '1M', 2, currentTimeFrame),
+                                  '30D', 2, currentTimeFrame),
                             ),
                             GestureDetector(
                               onTap: () {
@@ -90,10 +90,11 @@ class _DataScreenState extends State<DataScreen> {
                           ],
                         ),
                       ),
-                      Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 10),
-                          child: WaterLineChart(snapshot.data)),
+                      if (snapshot.data.length > 0)
+                        Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 10),
+                            child: WaterLineChart(snapshot.data)),
 
                       DataReportField(Column(
                         children: [
