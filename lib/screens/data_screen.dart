@@ -3,7 +3,6 @@ import 'package:Hydro/widgets/data_report_screen/data_widget.dart';
 import 'package:Hydro/widgets/data_report_screen/lineChart.dart';
 import 'package:Hydro/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class DataScreen extends StatefulWidget {
   @override

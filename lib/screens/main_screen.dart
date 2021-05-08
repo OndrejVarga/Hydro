@@ -5,7 +5,6 @@ import 'package:Hydro/screens/water_screen.dart';
 import 'package:Hydro/utils/database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_restart/flutter_restart.dart';
-import 'package:locally/locally.dart';
 import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
