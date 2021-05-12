@@ -1,16 +1,21 @@
 # Hydro
 
-A new Flutter project.
+An assistant that controls your water intake throughout the day.
+Works on Android.
 
-## Getting Started
+## Advantages of application
+- minimalistic UI, 
+- basic data processing
+- graph and data visualization
+- local database
+- notifications that remind you to drink water
 
-This project is a starting point for a Flutter application.
+## Technical aspect
+- Flutter and dart
+- SQLite
 
-A few resources to get you started if this is your first Flutter project:
+## Technical aspect
+This app was my first larger flutter project. I was an amateur(and still am 😅). It is an undocumented piece of garbage that no one should read. I'm keeping it here 
+mostly because of ... well who knows.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
