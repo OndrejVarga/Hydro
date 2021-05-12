@@ -42,20 +42,6 @@ class _TopBarState extends State<TopBar> {
                       Provider.of<Core>(context, listen: false).currentDate,
                   firstDate: DateTime(DateTime.now().year, 1, 1),
                   lastDate: DateTime(DateTime.now().year, 12, 30),
-                  selectableDayPredicate: (day) {
-                    DateTime yest = DateTime.now().subtract(Duration(days: 1));
-                    if (day.day == yest.day &&
-                        day.month == yest.month &&
-                        day.year == yest.year) {
-                      return true;
-                    }
-                    if (day.day == DateTime.now().day &&
-                        day.month == DateTime.now().month &&
-                        day.year == DateTime.now().year) {
-                      return true;
-                    }
-                    return false;
-                  },
                   builder: (BuildContext context, Widget child) {
                     return Theme(
                       data: ThemeData.dark().copyWith(

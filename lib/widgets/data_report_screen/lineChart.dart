@@ -19,6 +19,15 @@ class _WaterLineChartState extends State<WaterLineChart> {
 
   @override
   Widget build(BuildContext context) {
+    print(widget.data[0].day);
+    print(widget.data[0].month);
+    print(widget.data[0].year);
+    print(widget.data[0].currentGoal);
+    print(widget.data[0].amountOfDrunkWater);
+    print(widget.data.length);
+    if (widget.data.length == 1 && widget.data[0].amountOfDrunkWater == 0) {
+      return null;
+    }
     return Stack(
       children: <Widget>[
         AspectRatio(
@@ -160,12 +169,13 @@ class _WaterLineChartState extends State<WaterLineChart> {
 
   List<FlSpot> fromProgressToPoints() {
     List<FlSpot> spots = [];
+    double count = 0;
     for (int i = 0; i < widget.data[0].progress.length; i++) {
       print('val');
       print(i);
       print('val');
-      spots.add(FlSpot(
-          (i).toDouble(), widget.data[0].progress[i].cupSize.toDouble()));
+      count += widget.data[0].progress[i].cupSize.toDouble();
+      spots.add(FlSpot((i).toDouble(), count));
     }
 
     return spots;

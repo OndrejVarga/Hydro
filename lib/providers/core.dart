@@ -47,7 +47,7 @@ class Core with ChangeNotifier {
           year: date.year,
           month: date.month,
           day: date.day,
-          currentGoal: 0,
+          currentGoal: _presets.currentPresets['goal'],
           progress: []);
     }
     notifyListeners();

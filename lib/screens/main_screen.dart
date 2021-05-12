@@ -22,6 +22,7 @@ class _MainScreenState extends State<MainScreen> {
     _controller = PageController(
       initialPage: 1,
     );
+
     if (widget.toRestart) {
       FlutterRestart.restartApp();
     }
@@ -48,7 +49,7 @@ class _MainScreenState extends State<MainScreen> {
             controller: _controller,
             children: [
               Presets(),
-              WaterScreen(),
+              WaterScreen(_controller),
               DataScreen(),
             ],
           );

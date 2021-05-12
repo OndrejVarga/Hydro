@@ -1,9 +1,11 @@
+import 'package:Hydro/providers/core.dart';
 import 'package:Hydro/utils/progress_model.dart';
 import 'package:Hydro/utils/days_data_model.dart';
 import 'package:Hydro/utils/presets_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
+import 'package:provider/provider.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DBProvider {
@@ -207,8 +209,37 @@ class DBProvider {
                             .headline1
                             .copyWith(color: Colors.white, fontSize: 15),
                       ),
-                      onTap: () {
+                      onTap: () async {
                         indexA = index;
+                        print('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+                        // DateTime date = DateTime(0, 0, 0);
+                        // await showDatePicker(
+                        //   context: context,
+                        //   initialDate: Provider.of<Core>(context, listen: false)
+                        //       .currentDate,
+                        //   firstDate: DateTime(DateTime.now().year, 1, 1),
+                        //   lastDate: DateTime(DateTime.now().year, 12, 30),
+                        //   selectableDayPredicate: (day) {
+                        //     for (int i = 0; i < allData.length; i++) {
+                        //       if (day.day == allData[i].day &&
+                        //           day.month == allData[i].month &&
+                        //           day.year == allData[i].year) {
+                        //         return true;
+                        //       }
+                        //     }
+                        //     return false;
+                        //   },
+                        //   builder: (BuildContext context, Widget child) {
+                        //     return Theme(
+                        //       data: ThemeData.dark().copyWith(
+                        //           primaryColor: Theme.of(context).primaryColor,
+                        //           accentColor: Theme.of(context).accentColor,
+                        //           buttonTheme: ButtonThemeData(
+                        //               textTheme: ButtonTextTheme.primary)),
+                        //       child: child,
+                        //     );
+                        //   },
+                        // );
                         Navigator.pop(context);
                       },
                     );
@@ -235,6 +266,9 @@ class DBProvider {
     averageAmount = 0;
     for (int i = 0; i < data.length; i++) {
       totalAmout += data[i].amountOfDrunkWater;
+      print('DATA');
+      print(data[i].amountOfDrunkWater);
+      print(data[i].currentGoal);
       (data[i].amountOfDrunkWater >= data[i].currentGoal) &&
               data[i].amountOfDrunkWater > 0
           ? goalReached++
