@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Hydro',
+      title: 'Water Reminder',
       theme: MyTheme.getTheme(context),
       home: MultiProvider(
           providers: [ChangeNotifierProvider.value(value: Core())],

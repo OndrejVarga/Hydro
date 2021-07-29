@@ -7,7 +7,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="Hydro"
+        android:label="Water Reminder"
         android:icon="@drawable/app_icon">
         <activity
             android:name=".MainActivity"
